@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 export default defineConfig({
+  // Relative assets work at both a domain root and GitHub Pages' /stead/ path.
+  base: "./",
   plugins: [react()],
   build: {
     rollupOptions: {

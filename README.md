@@ -47,6 +47,21 @@ The browser stores a single draft (`stead:draft:v1`) and up to 50 scenarios (`st
 
 `npm run build`, then serve `dist/` on any HTTPS static host. `netlify.toml` and `public/_headers` supply Netlify build settings, security headers, and immutable asset caching. For other hosts, apply equivalent headers; allow `connect-src https://api.zippopotam.us`, self-hosted scripts/fonts, and inline SVG/CSS styles required by charts. No secret environment variables are needed. All other calculations work if ZIP lookup is blocked.
 
+### GitHub Pages
+
+The production site is published to the `gh-pages` branch. In GitHub **Settings → Pages**, select **Deploy from a branch**, choose **gh-pages**, and select **/ (root)**.
+
+Expected URL: https://software-factory-vibe-city.github.io/stead/
+
+To publish an updated build from your local source checkout:
+
+```sh
+npm ci
+npm run deploy:pages
+```
+
+This builds the app and pushes only `dist/` to `origin/gh-pages`; source remains on `main`. Relative asset paths support the repository subdirectory, and `.nojekyll` disables Jekyll processing. Deployment uses your local Git credentials; no GitHub Actions token is required. GitHub Pages does not apply Netlify's `_headers` file.
+
 ## Structure
 
 - `src/model.ts` — pure, typed financial engine and persistence/import validation
