@@ -1,0 +1,125 @@
+/* Keep muted supporting text readable on both paper and sage surfaces. */
+:root {
+  --text-muted: #606c57;
+}
+.product-label,
+.workspace-heading p,
+.eyebrow,
+.card-heading .eyebrow,
+.live-pill,
+.text-field,
+.field-label,
+.field > label,
+.location-line,
+.micro-note,
+.strategy button span,
+.section-number,
+.down-label,
+.input-caption,
+.input-shell > span,
+.sidebar-foot,
+.reset-button,
+.example-badge,
+.property-title p,
+.tabs button,
+.horizon-select select,
+.results-heading p,
+.segmented button,
+.stat-top,
+.stat-bottom,
+.card-heading p,
+.equity-value > span,
+.legend,
+.chart-note,
+.unit-label,
+.ledger-row,
+.ledger-row.subtle,
+.ledger-row.subtle > span:last-child,
+.expense-details > summary,
+.ledger-row abbr,
+.ledger-row small,
+.card-footnote,
+.risk-preview > p:not(.micro-note),
+.risk-values > div > span,
+.insight-card .eyebrow,
+.insight-card p,
+.cash-parts > div > span,
+.results-footer > span,
+.results-footer button,
+.disclaimer,
+.page-footer > span,
+.brand.small,
+.assumption-strip,
+.table-scroll caption,
+.table-scroll thead th,
+.table-scroll tbody th,
+.table-scroll tbody td,
+.slider-grid label > span,
+.slider-grid small,
+.scenario-case li,
+.scenario-case li b,
+.muted,
+.save-summary,
+.saved-table small,
+.empty-state p,
+.export-options small,
+.methodology,
+.sources-list span,
+.sources-list p {
+  color: var(--text-muted);
+}
+.stat.primary .stat-bottom {
+  color: #d5dfc9;
+}
+.stat.primary .stat-top {
+  color: #d5dfc9;
+}
+.stat.negative > strong,
+.text-red,
+.table-scroll .text-red,
+.risk-values > div:first-child strong,
+.ledger-row.final.loss strong {
+  color: #9c513c !important;
+}
+.text-green,
+.table-scroll .text-green {
+  color: #466b36 !important;
+}
+.text-button,
+.risk-values strong,
+.cash-parts > div > strong,
+.sources-list strong,
+.export-options strong,
+.empty-state h3,
+.methodology dt,
+.methodology h3,
+.method-intro,
+.notice,
+.notice strong,
+.save-summary strong {
+  color: #506e40;
+}
+.inline-warning,
+.notice.warning {
+  color: #856038;
+}
+.field-error {
+  color: #9c513c;
+}
+/* Chart tick labels must remain readable, even though exact data is also tabular. */
+.recharts-cartesian-axis-tick text,
+.risk-chart text {
+  fill: #66715e;
+}
+@media (pointer: coarse) {
+  .button,
+  .icon-button {
+    min-height: 40px;
+  }
+  .segmented button {
+    min-height: 32px;
+  }
+  .header-link {
+    min-height: 40px;
+  }
+}
